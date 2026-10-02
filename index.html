@@ -1,58 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="ka">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1000 დღე</title>
+    <title>1000 დღე...</title>
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background-color: #0f0f13;
+            /* შენი ფოტო ფონად (photo.jpg) + მუქი ფენა, რომ ტექსტი კარგად გამოჩნდეს */
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.65)), 
+                        url('photo.jpg') no-repeat center center/cover;
             color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Georgia, serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Georgia, serif;
             text-align: center;
+            padding: 20px;
         }
 
         .container {
-            max-width: 85%;
-            padding: 25px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            margin: 20px auto;
+            max-width: 500px;
+            width: 90%;
+            padding: 35px 25px;
+            background: rgba(15, 15, 20, 0.65);
+            border-radius: 24px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
 
         h1 {
-            font-size: 1.6rem;
-            margin-bottom: 15px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             color: #ffffff;
             font-weight: 400;
+            letter-spacing: 1px;
         }
 
         p {
-            font-size: 1rem;
+            font-size: 1.05rem;
             line-height: 1.8;
-            color: #d1d1d6;
+            color: #eaeaea;
             white-space: pre-wrap;
+            font-weight: 300;
         }
 
         .play-btn {
-            margin-top: 25px;
-            padding: 14px 30px;
+            margin-top: 30px;
+            padding: 14px 32px;
             font-size: 1rem;
-            background-color: #ffffff;
+            background: #ffffff;
             color: #0f0f13;
             border: none;
             border-radius: 30px;
             font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+            transition: transform 0.2s ease;
+        }
+
+        .play-btn:active {
+            transform: scale(0.96);
         }
     </style>
 </head>
@@ -62,7 +79,16 @@
         <h1>1000 დღე...</h1>
         
         <p id="text">
-აქ ჩაწერ შენს ტექსტს...
+2024 წლის 6 იანვარი... 
+დღე, როდესაც პირველად მითხარი, რომ ვუყვარდი. 
+
+დღეს, 2026 წლის 2 ოქტომბერს, იმ წამიდან ზუსტად 1000 დღე შესრულდა. ათასი დღე — ეს უბრალოდ ციფრები არ არიან. ეს არის ათასი სხვადასხვა ემოცია, ფიქრი, მოგონება და წამი, რომელმაც ჩემი ცხოვრება სამუდამოდ შეცვალა.
+
+დრო გადის, ბევრი რამ იცვლება, მაგრამ ზოგიერთი სიტყვა და გრძნობა დროს არ ემორჩილება. 6 იანვარს ნათქვამი ის პირველი სიტყვები დღემდე განსაკუთრებულ ადგილს იკავებს ჩემს მეხსიერებაში. 
+
+მინდოდა, ეს სიმბოლური 1000-ე დღე რაღაც განსაკუთრებულით აღმენიშნა. ეს ჩემი ჩაწერილი სიმღერაა — ჩემი ხმითა და გულით შესრულებული. მასში ის ემოციაა, რაც ამ 1000 დღის განმავლობაში მუდამ ჩემთან იყო. 
+
+მადლობა ყველაფრისთვის, რაც გვქონდა...
         </p>
 
         <button class="play-btn" onclick="toggleAudio()">🎵 მოსმენა / პაუზა</button>
